@@ -214,18 +214,16 @@ main.content {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.5rem;
     padding: 1rem;
-    transition: background-color 0.3s ease;
+    transition: opacity 0.333s ease; /* Faster transition */
+    opacity: 0; /* Initially set opacity to 0 */
+    position: absolute; /* Use absolute positioning */
+    width: calc(100% - 2rem); /* Set width to container width minus padding */
 }
 
-.activity-card h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
-}
-
-.activity-card p {
-    color: #666;
-    margin-bottom: 1rem;
+.activity-card.active {
+    display: block;
+    opacity: 1; /* Fade in active card */
+    position: relative; /* Reset positioning for active card */
 }
 
 .step-card {
@@ -240,6 +238,16 @@ main.content {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     color: var(--text-color);
+}
+
+.step-card p {
+    color: #666;
+    font-size: 0.9rem; /* Smaller than activity title */
+}
+
+.activity-card > p {
+    color: #666; /* Activity Description Style */
+    font-size: 0.9rem; /* Smaller than activity title */
 }
 
 .collapsible {
@@ -346,7 +354,6 @@ body.dark-mode .activity-card p,
 body.dark-mode .step-card p {
     color: #ccc;
 }
-
 
 /* Hide all activity cards by default */
 .activity-card {
