@@ -57,15 +57,18 @@ toggleDialoguesButton.addEventListener('click', () => {
     dialoguesVisible = !dialoguesVisible;
 });
 
-// Function to update the progress bar
-function updateProgressBar(activityCard) {
-    const stepCards = activityCard.querySelectorAll('.step-card');
-    const progressBar = document.querySelector('.progress');
-    const totalSteps = stepCards.length;
-    //We only show the progress, there's no option to track individual progress within the current activity.
-    const progressPercentage = 100; // (completedSteps / totalSteps) * 100;
-    progressBar.style.width = `${progressPercentage}%`;
-}
+// Progress Bar (Basic Example)
+/*const stepCards = document.querySelectorAll('.step-card');
+const progressBar = document.querySelector('.progress');
+const totalSteps = stepCards.length;
+let completedSteps = 0; // You'd need a way to track completed steps
+
+// This is a VERY basic example. In a real application, you'd likely use a checkbox or button to mark steps as complete.
+// For now, let's just assume that all steps are completed on page load for demonstration purposes.
+completedSteps = totalSteps;
+
+const progressPercentage = (completedSteps / totalSteps) * 100;
+progressBar.style.width = `${progressPercentage}%`;*/
 
 // Show Activity card
 const activityLinks = document.querySelectorAll('.activity-list a');
@@ -80,7 +83,6 @@ function showActivity(activityId) {
     const selectedActivity = document.getElementById(activityId);
     if (selectedActivity) {
         selectedActivity.classList.add('active');
-        updateProgressBar(selectedActivity); // Update the progress bar when activity changes
     }
 }
 
