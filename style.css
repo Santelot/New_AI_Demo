@@ -154,23 +154,25 @@ aside.activity-list li {
 aside.activity-list a {
     color: var(--text-color);
     text-decoration: none;
-    display: flex; /* Use flexbox to center content */
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1); /* Circular background */
+    font-size: 1.5rem; /* Larger font size */
+    width: auto; /* Adjust width to content */
+    padding: 0.5rem 1.2rem; /* Vertical and horizontal padding */
+    background-color: rgba(0, 0, 0, 0.1); /* Change background color */
+    border-radius: 30px; /* Rounded corners */
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
     transition: background-color 0.2s ease;
-    font-size: 1.2rem; /* Make numbers bigger */
 }
 
 aside.activity-list a:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-aside.activity-list a span {
-    display: block; /* Ensure span takes full width/height */
+aside.activity-list a i {
+    margin-right: 0.5rem; /* Add spacing between the icon and number */
 }
 
 .sidebar-info {
@@ -199,7 +201,7 @@ main.content {
 .progress {
     background-color: var(--primary-color);
     height: 100%;
-    width: 0%;
+    width: 100%;
     transition: width 0.3s ease;
 }
 
