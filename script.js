@@ -108,12 +108,24 @@ activityCards.forEach(card => card.classList.remove('active'));
 
 // Function to show the selected activity card
 function showActivity(activityId) {
-    activityCards.forEach(card => card.classList.remove('active'));
+    // Fade out the current active card
+    const currentActive = document.querySelector('.activity-card.active');
+    if (currentActive) {
+        currentActive.classList.remove('active');
+        setTimeout(() => {
+            currentActive.style.display = 'none';
+        }, 333); // Faster timeout
+    }
+
+    //Show the selected activity card and fade it in
     const selectedActivity = document.getElementById(activityId);
     if (selectedActivity) {
-        selectedActivity.classList.add('active');
-        updateProgressBar(); // Update the progress bar when activity changes
+        selectedActivity.style.display = 'block';
+        setTimeout(() => {
+            selectedActivity.classList.add('active');
+        }, 50);
     }
+    updateProgressBar();
 }
 
 // Function to update the progress bar
