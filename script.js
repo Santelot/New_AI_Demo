@@ -104,7 +104,10 @@ const progressBar = document.querySelector('.progress');
 const numberOfActivities = activityCards.length;
 
 // Hide all activity cards initially
-activityCards.forEach(card => card.classList.remove('active'));
+activityCards.forEach(card => {
+    card.classList.remove('active');
+     card.style.display = 'none'; // Ensure all cards are initially hidden
+});
 
 // Function to show the selected activity card
 function showActivity(activityId) {
@@ -124,14 +127,14 @@ function showActivity(activityId) {
         setTimeout(() => {
             selectedActivity.classList.add('active');
         }, 50);
+       updateProgressBar(activityId);
     }
-    updateProgressBar();
 }
 
 // Function to update the progress bar
-function updateProgressBar() {
-    const activityIndex = parseInt(document.querySelector('.activity-card.active').id.split('-')[1]);
-    const progressPercentage = ((activityIndex) / (numberOfActivities)) * 100;
+function updateProgressBar(activityId) {
+    const activityIndex = parseInt(activityId.split('-')[1]);
+    const progressPercentage = (activityIndex / numberOfActivities) * 100;
     progressBar.style.width = `${progressPercentage}%`;
 }
 
@@ -147,5 +150,5 @@ activityLinks.forEach(link => {
 // Show the first activity by default
 if (activityCards.length > 0) {
     showActivity(activityCards[0].id);
-    updateProgressBar();
+     updateProgressBar(activityCards[0].id);
 }
