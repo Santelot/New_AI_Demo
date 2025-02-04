@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+        <h1><span class="book-icon">📖</span> <strong>Playbook - New AI Mission Demo</strong></h1>
+        <div class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle-input">
+                <span class="slider round"></span>
+            </label>
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Activities</h2>
+            <ul>
+                <li><a href="#activity-1"><span>1️⃣</span></a></li>
+                <li><a href="#activity-2"><span>2️⃣</span></a></li>
+                <li><a href="#activity-3"><span>3️⃣</span></a></li>
+                <li><a href="#activity-4"><span>4️⃣</span></a></li>
+                <li><a href="#activity-5"><span>5️⃣</span></a></li>
+            </ul>
+
+            <div class="sidebar-info">
+                <p>💡 Each activity is carefully designed to engage students.</p>
+                <p>⏱️ Time estimates are provided for each activity to help you stay on track.</p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <button id="toggle-dialogues">Show All Dialogues</button>
+
+            <div class="activity-card" id="activity-1">
+                <h2>⚡ Activity 1: Introduction ⏰ 10 minutes</h2>
+                <p>Welcome and Introduction to the lesson.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <h3>Step 1: Greeting</h3>
+                        <p>Greet Students</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">"Hello Class!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-2">
+                <h2>⚡ Activity 2: Brainstorming ⏰ 15 minutes</h2>
+                <p>Lorem Ipsum dolor sit amet.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <h3>Step 1: Lorem Ipsum</h3>
+                        <p>Lorem Ipsum Dolor</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">"Lorem Ipsum."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-3">
+                <h2>⚡ Activity 3: Microbit Setup ⏰ 10 minutes</h2>
+                <p>Lorem Ipsum dolor sit amet.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <h3>Step 1: Lorem Ipsum</h3>
+                        <p>Lorem Ipsum Dolor</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">"Lorem Ipsum."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-4">
+                <h2>⚡ Actividad 4: Brain Spark ⏰ 20 minutes</h2>
+                <p>Diseñar un sistema interactivo en Microbit con apoyo del Asistente.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <h3>🔥 PASO 1 (0.5 minutos): Proyectar Diapositiva X+1</h3>
+                        <p>Proyectar Diapositiva X+1 "Brain Spark - Desafío en Acción".</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Hoy enfrentamos un problema interesante. 🤔 ¿Se han dado cuenta de que la tecnología con la que interactuamos responde a nuestras acciones? 🎮 Desde un control de videojuegos que reacciona a cada botón, hasta una app que nos da respuestas cuando escribimos algo. Hoy, su misión es diseñar su propio **sistema interactivo** en Microbit. ⚙️</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>💡 PASO 2 (1 minuto): Proyectar Diapositiva X+2</h3>
+                        <p>Proyectar Diapositiva X+2 "Ejemplos de Sistemas Interactivos".</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Un sistema interactivo puede hacer muchas cosas, pero siempre tiene **tres elementos clave**: (1) 🔘 Algo que activa la interacción. (2) 🧠 Un procesamiento que decide qué hacer con esa información. (3) 📢 Una salida o respuesta visible para el usuario. 🎯 Ejemplos: Un semáforo peatonal que cambia al presionar un botón 🚦, un videojuego que muestra un puntaje cuando anotas 🎯, o incluso un microondas que calienta comida cuando seleccionas el tiempo 🍕. En Microbit, pueden hacer algo **similar**.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>🤖 PASO 3 (0.5 minutos): Proyectar Diapositiva X+3</h3>
+                        <p>Proyectar Diapositiva X+3 "¿Cómo quieres empezar?".</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Ahora que sabemos lo que son los sistemas interactivos, es momento de **diseñar el suyo**. 🚀 Pueden partir de una idea propia 💡 o dejar que su **Asistente** les ayude a encontrar una. **¡Saluden a su Asistente para comenzar!** 👋</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>📝 PASO 4 (2 minutos): Proyectar Diapositiva X+4</h3>
+                        <p>Proyectar Diapositiva X+4 "Ideación".</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Asegúrense de **refinar su idea** con su Asistente. 🛠️ Si ya tienen algo en mente, cuéntenlo y vean cómo mejorarlo. Si no, dejen que les sugiera algo. **Piensen:** 🎮 ¿Qué acción hará su sistema? 🔄 ¿Cómo responderá? ⭐ ¿Qué lo hará único?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>⚙️ PASO 5 (1 minuto): Proyectar Diapositiva X+5</h3>
+                        <p>Proyectar Diapositiva X+5 "Creación".</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Una vez que estén contentos con su idea, **pídanle a su Asistente** que les genere el **pseudocódigo** diseñado para MakeCode. ✨ ➡️ Conviertan su **pseudocódigo en bloques** en MakeCode. 🔲 ➡️ **Prueben en el simulador** y observen el resultado. 👀 **¿Responde como esperaban?** ✅</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>🔄 PASO 6 (14 minutos): Proyectar Diapositiva X+6</h3>
+                        <p>Proyectar Diapositiva X+6 "Iteración".</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Ahora les daré **tiempo para trabajar en su sistema**. ⏳ **Si algo no funciona bien**, describan el problema a su Asistente 🧐. **Trabajen juntos** para **solucionar errores** y mejorar su código. 🛠️ **Opcional:** 🚀 Pueden agregar más funciones o hacer que la interacción sea más dinámica. **¡Hagan que sea épico!** 🎉</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>🎯 PASO 7 (1 minuto): Explicar Siguiente Actividad</h3>
+                        <p>Explicar que en la siguiente actividad compartirán su sistema interactivo con un compañero.</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">¡Y listo! ✅ Ahora tienen un **sistema interactivo funcional**. 📢 Pronto compartirán su trabajo con un compañero para recibir retroalimentación. Mientras tanto, **pueden hacer los últimos ajustes** para asegurarse de que su sistema está listo para mostrarse. 🏆</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-5">
+                <h2>⚡ Activity 5: Evaluation ⏰ 5 minutes</h2>
+                <p>Quick Evaluation of the lesson and further questions.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <h3>Step 1: Evaluation</h3>
+                        <p>Ask a student for feedback</p>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">"What do you think about the lesson?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
