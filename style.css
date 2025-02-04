@@ -194,15 +194,18 @@ main.content {
 
 .progress-bar {
     background-color: var(--light-gray);
-    height: 0.5rem;
+    height: 0.7rem; /* Thicker progress bar */
     margin-bottom: 1.5rem;
+    border-radius: 5px; /* Rounded edges */
+    overflow: hidden; /* Hide overflow to apply border-radius */
 }
 
 .progress {
     background-color: var(--primary-color);
     height: 100%;
-    width: 100%;
+    width: 0%; /* Initial width */
     transition: width 0.3s ease;
+    border-radius: 5px; /* Rounded edges */
 }
 
 .activity-card {
@@ -331,6 +334,20 @@ body.dark-mode aside.activity-list a {
     color: var(--dark-text-color);
 }
 
+body.dark-mode aside.activity-list h2 {
+    color: var(--dark-text-color); /* Activity Title is White during dark mode now */
+}
+
+body.dark-mode .sidebar-info {
+   color: #ccc;
+}
+
+body.dark-mode .activity-card p,
+body.dark-mode .step-card p {
+    color: #ccc;
+}
+
+
 /* Hide all activity cards by default */
 .activity-card {
     display: none;
@@ -355,6 +372,38 @@ body.dark-mode aside.activity-list a {
 
 #toggle-dialogues:hover {
     background-color: var(--dark-primary-color);
+}
+
+.timer-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    color: white; /* Timer Number in White */
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+    border-radius: 15px;
+    background-color: rgba(0,0,0, 0.2);
+}
+
+.timer-container button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.timer-container button:hover {
+    background-color: #b2dfdb;
+}
+
+.header-widgets {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 /* Basic Responsive Design */
