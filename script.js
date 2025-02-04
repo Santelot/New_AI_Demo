@@ -57,22 +57,51 @@ toggleDialoguesButton.addEventListener('click', () => {
     dialoguesVisible = !dialoguesVisible;
 });
 
-// Progress Bar (Basic Example)
-/*const stepCards = document.querySelectorAll('.step-card');
-const progressBar = document.querySelector('.progress');
-const totalSteps = stepCards.length;
-let completedSteps = 0; // You'd need a way to track completed steps
+// Chronometer Functionality
+const timer = document.getElementById('timer');
+const startStopButton = document.getElementById('startStop');
+const resetButton = document.getElementById('reset');
 
-// This is a VERY basic example. In a real application, you'd likely use a checkbox or button to mark steps as complete.
-// For now, let's just assume that all steps are completed on page load for demonstration purposes.
-completedSteps = totalSteps;
+let interval;
+let timeLeft = 0;
+let timerRunning = false;
 
-const progressPercentage = (completedSteps / totalSteps) * 100;
-progressBar.style.width = `${progressPercentage}%`;*/
+function updateTimerDisplay() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timer.textContent = `⏱️ ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+
+function startStopTimer() {
+    if (timerRunning) {
+        clearInterval(interval);
+        startStopButton.textContent = 'Start';
+    } else {
+        interval = setInterval(() => {
+            timeLeft++;
+            updateTimerDisplay();
+        }, 1000);
+        startStopButton.textContent = 'Stop';
+    }
+    timerRunning = !timerRunning;
+}
+
+function resetTimer() {
+    clearInterval(interval);
+    timerRunning = false;
+    timeLeft = 0;
+    updateTimerDisplay();
+    startStopButton.textContent = 'Start';
+}
+
+startStopButton.addEventListener('click', startStopTimer);
+resetButton.addEventListener('click', resetTimer);
 
 // Show Activity card
 const activityLinks = document.querySelectorAll('.activity-list a');
 const activityCards = document.querySelectorAll('.activity-card');
+const progressBar = document.querySelector('.progress');
+const numberOfActivities = activityCards.length;
 
 // Hide all activity cards initially
 activityCards.forEach(card => card.classList.remove('active'));
@@ -83,7 +112,15 @@ function showActivity(activityId) {
     const selectedActivity = document.getElementById(activityId);
     if (selectedActivity) {
         selectedActivity.classList.add('active');
+        updateProgressBar(); // Update the progress bar when activity changes
     }
+}
+
+// Function to update the progress bar
+function updateProgressBar() {
+    const activityIndex = parseInt(document.querySelector('.activity-card.active').id.split('-')[1]);
+    const progressPercentage = ((activityIndex) / (numberOfActivities)) * 100;
+    progressBar.style.width = `${progressPercentage}%`;
 }
 
 // Add event listeners to activity links
@@ -98,4 +135,5 @@ activityLinks.forEach(link => {
 // Show the first activity by default
 if (activityCards.length > 0) {
     showActivity(activityCards[0].id);
+    updateProgressBar();
 }
