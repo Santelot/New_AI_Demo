@@ -28,6 +28,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1rem; /* Increased base font size */
 }
 
 header {
@@ -42,7 +43,7 @@ header {
 }
 
 header h1 {
-    font-size: 1.75rem;
+    font-size: 1.75em; /* Use em for relative sizing */
     margin: 0;
     font-weight: 700;
     display: flex;
@@ -51,7 +52,7 @@ header h1 {
 
 header h1 .book-icon {
     margin-right: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.5em; /* Use em for relative sizing */
 }
 
 .theme-toggle {
@@ -136,7 +137,7 @@ aside.activity-list {
 }
 
 aside.activity-list h2 {
-    font-size: 1.25rem;
+    font-size: 1.25em; /* Use em for relative sizing */
     margin-bottom: 1rem;
     color: var(--text-color);
 }
@@ -157,7 +158,7 @@ aside.activity-list a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem; /* Larger font size */
+    font-size: 1.5em; /* Larger font size */
     width: auto; /* Adjust width to content */
     padding: 0.5rem 1.2rem; /* Vertical and horizontal padding */
     background-color: rgba(0, 0, 0, 0.1); /* Change background color */
@@ -177,7 +178,7 @@ aside.activity-list a i {
 
 .sidebar-info {
     margin-top: auto; /* Push to the bottom */
-    font-size: 0.8rem;
+    font-size: 0.8em; /* Use em for relative sizing */
     color: #666;
 }
 
@@ -241,19 +242,19 @@ main.content {
 }
 
 .step-card h3 {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Increased Step Title Font Size */
     margin-bottom: 0.5rem;
     color: var(--text-color);
 }
 
 .step-card p {
     color: #666;
-    font-size: 0.9rem; /* Smaller than activity title */
+    font-size: 1em; /* Adjusted size for step descriptions */
 }
 
 .activity-card > p {
     color: #666; /* Activity Description Style */
-    font-size: 0.9rem; /* Smaller than activity title */
+    font-size: 1em; /* Adjusted size for activity descriptions */
 }
 
 /* Multi-Column Step Cards */
@@ -298,7 +299,7 @@ main.content {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.9em;
     transition: background-color 0.2s ease;
     margin: 0 auto;
 }
@@ -374,10 +375,6 @@ body.dark-mode .progress-bar {
 body.dark-mode aside.activity-list {
     background-color: var(--dark-secondary-color);
     border-color: var(--dark-light-gray);
-}
-
-body.dark-mode aside.activity-list a {
-    color: var(--dark-text-color);
 }
 
 body.dark-mode aside.activity-list h2 {
