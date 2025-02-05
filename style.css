@@ -226,8 +226,14 @@ main.content {
     position: relative; /* Reset positioning for active card */
 }
 
+/* Reverted the style because we'll put new styles on it */
+.steps {
+    display: block;
+}
+
+/* Reverted the style because we'll put new styles on it */
 .step-card {
-    background-color: var(--secondary-color);
+     background-color: var(--secondary-color);
     border-radius: 6px;
     padding: 0.75rem;
     margin-bottom: 0.75rem;
@@ -250,6 +256,37 @@ main.content {
     font-size: 0.9rem; /* Smaller than activity title */
 }
 
+/* Multi-Column Step Cards */
+.steps {
+    display: grid;
+    grid-template-columns: 1fr; /* One column at the beggining */
+    gap: 1rem;
+}
+
+.step-card {
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    transition: background-color 0.3s ease;
+    display: grid;
+    grid-template-columns: 1fr; /* One Column at First */
+}
+
+.step-content {
+    margin-bottom: 0.75rem; /* Added some spacing */
+}
+
+.dialogue.assistant {
+    background-color: var(--dialogue-assistant);
+    text-align: left;
+    color: var(--text-color);
+    padding: 0.75rem;
+    border-radius: 6px;
+}
+
+/* Collapsible */
+
 .collapsible {
     margin-top: 0.75rem;
 }
@@ -263,6 +300,7 @@ main.content {
     cursor: pointer;
     font-size: 0.9rem;
     transition: background-color 0.2s ease;
+    margin: 0 auto;
 }
 
 .collapsible-button:hover {
@@ -413,19 +451,17 @@ body.dark-mode .step-card p {
     align-items: center;
 }
 
-/* Basic Responsive Design */
-@media (max-width: 800px) {
-    .main-container {
-        flex-direction: column;
+/* Two column grid layout for step cards */
+@media (min-width: 768px) {
+    .steps {
+        grid-template-columns: 1fr; /* Two columns on larger screens */
     }
 
-    aside.activity-list {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--light-gray);
+    .step-card {
+        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
     }
 
-    main.content {
-        padding: 0.75rem;
+    .step-content {
+        margin-bottom: 0rem; /* No vertical space */
     }
 }
